@@ -13,6 +13,9 @@ int check_cycle(listint_t *head)
 	if (head == NULL || head->next == NULL)
 		return (0);
 
+	if (newHead->next == NULL || next == NULL || next->next == NULL)
+		return (0);
+
 	while (next != NULL && next->next != NULL)
 	{
 		if (newHead == next)
