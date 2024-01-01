@@ -10,10 +10,10 @@ int check_cycle(listint_t *head)
 	listint_t *newHead = head;
 	listint_t *next = head->next;
 
-	if (head == NULL || head->next == NULL)
+	if (!head)
 		return (0);
 
-	while (next != NULL && next->next != NULL)
+	while (newHead && next && next->next)
 	{
 		newHead = newHead->next;
 		next = next->next->next;
