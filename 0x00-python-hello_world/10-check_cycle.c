@@ -8,7 +8,7 @@
 int check_cycle(listint_t *head)
 {
 	listint_t *newHead = head;
-	listint_t *next = head->next;
+	listint_t *next = head;
 
 	if (!head)
 		return (0);
