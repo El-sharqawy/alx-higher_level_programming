@@ -35,7 +35,7 @@ void print_python_bytes(PyObject *p)
 		if (str[i] >= 0)
 			printf(" %02x", str[i]);
 		else 
-			printf(" %02x", st[i] + 256);
+			printf(" %02x", str[i] + 256);
 		i++;
 	}
 	printf("\n");
@@ -64,7 +64,7 @@ void print_python_list(PyObject *p)
 	{
 		pyObj = ((PyListObject *)p)->ob_item[i];
 		printf("Element %ld: %s\n", i, ((pyObj)->ob_type)->tp_name);
-		if (PyBytes_Check((pyObj))
+		if (PyBytes_Check(pyObj))
 		{
 			print_python_bytes(pyObj);
 		}
