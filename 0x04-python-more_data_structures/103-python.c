@@ -69,8 +69,6 @@ void print_python_list(PyObject *p)
 		pyObj = ((PyListObject *)p)->ob_item[i];
 		printf("Element %ld: %s\n", i, ((pyObj)->ob_type)->tp_name);
 		if (PyBytes_Check(pyObj))
-		{
 			print_python_bytes(pyObj);
-		}
 	}
 }
