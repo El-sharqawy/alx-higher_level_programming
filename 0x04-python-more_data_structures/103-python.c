@@ -33,9 +33,9 @@ void print_python_bytes(PyObject *p)
 	while (i < limit)
 	{
 		if (str[i] >= 0)
-			printf(" %02x", string[i]);
+			printf(" %02x", str[i]);
 		else 
-			printf(" %02x", string[i] + 256);
+			printf(" %02x", st[i] + 256);
 		i++;
 	}
 	printf("\n");
