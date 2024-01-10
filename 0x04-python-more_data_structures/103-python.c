@@ -2,7 +2,7 @@
 #include <Python.h>
 
 /**
- * print_python_bytes - print list bytes informations 
+ * print_python_bytes - print list bytes informations
  *
  * @p: Python Object
  *
@@ -34,7 +34,7 @@ void print_python_bytes(PyObject *p)
 	{
 		if (str[i] >= 0)
 			printf(" %02x", str[i]);
-		else 
+		else
 			printf(" %02x", str[i] + 256);
 		i++;
 	}
