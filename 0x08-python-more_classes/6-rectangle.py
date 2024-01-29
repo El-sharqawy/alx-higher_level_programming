@@ -8,6 +8,7 @@ class Rectangle():
     """ class Rectangle that defines rectangle"""
 
     num = 0
+
     def __init__(self, width=0, height=0):
         """ Initialization with optional width and height"""
         self.width = width
