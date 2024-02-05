@@ -4,5 +4,5 @@
 
 
 class BaseGeomety:
-    """ empty class """
+    """ empty class"""
     pass
