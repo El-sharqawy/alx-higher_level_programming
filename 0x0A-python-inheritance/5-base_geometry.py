@@ -3,6 +3,6 @@
 """
 
 
-class BaseGeomety:
+class BaseGeometry:
     """ empty class"""
     pass
