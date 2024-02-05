@@ -2,6 +2,7 @@
 """ Improve Geometry
 """
 
+
 class BaseGeometry:
     """ empty class"""
     def area(self):
