@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Module base geometry
+""" Module base geometry
 """
 
 
