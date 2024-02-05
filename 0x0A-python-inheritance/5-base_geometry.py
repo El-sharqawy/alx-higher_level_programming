@@ -3,6 +3,7 @@
 an empty class.
 """
 
+
 class BaseGeomety:
     """ does nothing """
     pass
