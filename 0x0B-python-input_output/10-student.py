@@ -24,7 +24,7 @@ class Student:
 
             for iAttr in range(len(attrs)):
                 for sAttr in obj:
-                    if attrs[iAttr] = sAttr:
+                    if attrs[iAttr] == sAttr:
                         myList[sAttr] = obj[sAttr]
             return (myList)
         return (obj)
