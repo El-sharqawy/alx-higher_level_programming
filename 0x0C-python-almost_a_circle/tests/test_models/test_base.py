@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Defines unittests for base.py
-"""
+"""Defines unittests for base.py."""
 import os
 import unittest
 from models.base import Base
@@ -389,6 +388,7 @@ class TestBase_load_from_file(unittest.TestCase):
     def test_load_from_file_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file([], 1)
+
 
 
 if __name__ == "__main__":
