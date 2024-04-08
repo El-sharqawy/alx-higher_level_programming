@@ -1,10 +1,17 @@
 #!/usr/bin/node
 
-let x = 0;
-for (let i = 0; i <= process.argv.length; i++) {
-  if (process.argv[i] > x) {
-    x = process.argv[i];
+function getBiggest () {
+  let x = 0;
+  if (process.argv.length - 2 === 1) {
+    return (x);
+  } else {
+    for (let i = 0; i < process.argv.length; i++) {
+      if (process.argv[i] > x) {
+        x = process.argv[i];
+      }
+    }
   }
+  return (x);
 }
 
-console.log(x);
+console.log(getBiggest());
