@@ -1,6 +1,9 @@
 #!/usr/bin/node
 
 function add (a, b) {
+  if (a === undefined || b === undefined) {
+    return (NaN);
+  }
   return (a + b);
 }
 
