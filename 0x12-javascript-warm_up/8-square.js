@@ -7,7 +7,7 @@ if (isNaN(X)) {
   for (let i = 0; i < X; i++) {
     for (let j = 0; j < X; j++) {
       process.stdout.write('X');
-      if (j === X-1) {
+      if (j === X - 1) {
         process.stdout.write('\n');
       }
     }
