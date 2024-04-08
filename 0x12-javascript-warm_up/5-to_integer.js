@@ -2,7 +2,7 @@
 
 const myVar = parseInt(process.argv[2]);
 if (isNaN(myVar)) {
-  console.log('No a number');
+  console.log('Not a number');
 } else {
   console.log(`My number: ${myVar}`);
 }
