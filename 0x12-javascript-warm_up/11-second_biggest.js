@@ -1,17 +1,9 @@
 #!/usr/bin/node
 
-function getBiggest () {
-  let x = 0;
-  if (process.argv.length - 2 === 1) {
-    return (x);
-  } else {
-    for (let i = 0; i < process.argv.length; i++) {
-      if (parseInt(process.argv[i]) > x) {
-        x = praseInt(process.argv[i]);
-      }
-    }
-  }
-  return (x);
+if (process.argv.length <= 3) {
+  console.log('0');
+} else {
+  const arr = process.argv.slice(2).map(Number);
+  const sBig = arr.sort(function (a, b) { return  b - a; })[1];
+  console.log(sBig);
 }
-
-console.log(getBiggest());
