@@ -6,8 +6,8 @@ function getBiggest () {
     return (x);
   } else {
     for (let i = 0; i < process.argv.length; i++) {
-      if (process.argv[i] > x) {
-        x = process.argv[i];
+      if (parseInt(process.argv[i]) > x) {
+        x = praseInt(process.argv[i]);
       }
     }
   }
