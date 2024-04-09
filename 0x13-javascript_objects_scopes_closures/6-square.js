@@ -3,7 +3,7 @@
 const OldSquare = require('./5-square');
 
 class Square extends OldSquare {
-  charPrint(char) {
+  charPrint (char) {
     if (char === undefined) {
       char = 'X';
     }
@@ -11,7 +11,7 @@ class Square extends OldSquare {
       for (let j = 0; j < this.width; j++) {
         process.stdout.write(char);
 
-        if (j == this.width - 1) {
+        if (j === this.width - 1) {
           process.stdout.write('\n');
         }
       }
