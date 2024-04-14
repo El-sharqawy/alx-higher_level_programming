@@ -11,7 +11,7 @@ def list_states(username, password, database):
         connection = MySQLdb.connect(host="localhost", user=username,
                                      passwd=password, db=database, port=3306)
         cursor = connection.cursor()
-        cursor.execute("""SELECT * FROM states WHERE name LIKE 'N%'
+        cursor.execute("""SELECT * FROM states WHERE name LIKE BINARY 'N%'
                        ORDER BY id ASC""")
         states = cursor.fetchall()
 
