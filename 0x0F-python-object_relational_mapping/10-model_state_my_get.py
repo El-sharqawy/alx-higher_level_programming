@@ -24,9 +24,10 @@ def createSession(username, password, database, searchFor):
     except IndexError:
         print("Not found")
 
+
 if __name__ == '__main__':
     if len(sys.argv) != 5:
-        print("""Usage: ./10-model_state_my_get.py <user> <pwd> <db> <state>""")
+        print("""Usage:./10-model_state_my_get.py <user> <pwd> <db> <state>""")
         sys.exit(1)
 
     createSession(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
