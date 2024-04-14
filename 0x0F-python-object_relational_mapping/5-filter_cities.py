@@ -12,7 +12,7 @@ def list_states(username, password, database, user_input):
                                      passwd=password, db=database, port=3306)
         cursor = connection.cursor()
         query = """SELECT cities.name FROM cities INNER JOIN states ON
-                cities.state_id = states.id WHERE states.name LIKE %s"""
+                cities.state_id = states.id WHERE states.name=%s"""
         cursor.execute(query, (user_input, ))
         states = cursor.fetchall()
 
