@@ -16,8 +16,8 @@ def list_states(username, password, database, user_input):
         cursor.execute(query, (user_input, ))
         states = cursor.fetchall()
 
-        for state in states:
-            print(state)
+        temp = list(row[0] for row in states)
+        print(*temp, sep=", ")
 
         cursor.close()
         connection.close()
