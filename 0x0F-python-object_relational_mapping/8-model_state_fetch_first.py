@@ -17,9 +17,12 @@ def createSession(username, password, database):
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
+    state = session.query(State).first()
 
-    for state in session.query(State).order_by(State.id):
-        print(state[0].id, state[0].name, sep=": ")
+    if state is None:
+        print("Nothing")
+    else:
+        print(state.id, state.name, sep=": ")
 
 
 if __name__ == '__main__':
