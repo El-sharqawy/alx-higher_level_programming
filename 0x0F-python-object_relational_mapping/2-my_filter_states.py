@@ -11,7 +11,8 @@ def list_states(username, password, database, user_input):
         connection = MySQLdb.connect(host="localhost", user=username,
                                      passwd=password, db=database, port=3306)
         cursor = connection.cursor()
-        query = "SELECT * FROM states WHERE name = '{}'".format(user_input)
+        query = """SELECT * FROM states
+                    WHERE name LIKE BINARY '{}'""".format(user_input)
         cursor.execute(query)
         states = cursor.fetchall()
 
