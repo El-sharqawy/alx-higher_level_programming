@@ -23,7 +23,7 @@ def createSession(username, password, database):
     filter_query = (City.state_id == State.id)
 
     for instance in query.filter(filter_query):
-        print("{}: ({}) {}".format(instance[0], instance[1]), instance[2])
+        print(f"{instance[0]}: ({instance[1]}) {instance[2]}")
 
 
 if __name__ == '__main__':
