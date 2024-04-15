@@ -19,8 +19,7 @@ def createSession(username, password, database):
     session = Session()
 
     for instance in session.query(State).filter(State.name.like('%a%')):
-        sesstion.delete(instance)
-
+        session.delete(instance)
     session.commit()
 
 
