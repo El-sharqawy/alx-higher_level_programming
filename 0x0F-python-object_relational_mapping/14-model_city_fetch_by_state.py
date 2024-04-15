@@ -25,6 +25,7 @@ def createSession(username, password, database):
     for instance in query.filter(filter_query):
         print("{}: ({}) {}".format(instance[0], instance[1]), instance[2])
 
+
 if __name__ == '__main__':
     if len(sys.argv) != 4:
         print("""Usage: ./11-model_state_insert.py <user> <pwd> <db>""")
