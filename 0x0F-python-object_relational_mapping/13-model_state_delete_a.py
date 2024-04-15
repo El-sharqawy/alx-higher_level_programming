@@ -18,8 +18,9 @@ def createSession(username, password, database):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for i in session.query(State).filter(State.name.like('%a%')):
-        sesstion.delete(i)
+    for instance in session.query(State).filter(State.name.like('%a%')):
+        sesstion.delete(instance)
+
     session.commit()
 
 
