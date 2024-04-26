@@ -3,12 +3,12 @@
 
 
 def find_peak(list_of_integers):
-	""" Find the peak """
-	if not list_of_integers:
-		return None
+    """Find the peak"""
+    if not list_of_integers:
+        return None
 
-	left = 0
-	right = len(list_of_integers) - 1
+    left = 0
+    right = len(list_of_integers) - 1
 
     while left < right:
         mid = (left + right) // 2
