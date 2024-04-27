@@ -13,5 +13,5 @@ if __name__ == '__main__':
     gitHubUrl = f"https://api.github.com/repos/{u}/{r}/commits"
     response = requests.get(gitHubUrl)
     data = response.json()
-    for commit in data:
-        print(f"{commit.get('sha')}: {commit['commit']['author']['name']}")
+    for commit in range(10):
+        print(f"{data[commit].get('sha')}: {data[commit]['commit']['author']['name']}")
