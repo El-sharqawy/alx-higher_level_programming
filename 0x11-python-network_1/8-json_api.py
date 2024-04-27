@@ -10,16 +10,14 @@ import requests
 if __name__ == '__main__':
     val = ""
     url = 'http://0.0.0.0:5000/search_user'
-    if sys.argv[1]:
+    if len(sys.argv) > 1:
         val = sys.argv[1]
     obj = {'q': val}
     response = requests.post(url, data=obj)
     try:
         jsonData = response.json()
         if jsonData:
-            for item in jsonData:
-                if 'id' in item and 'name' in item:
-                    print(f"[{item['id']}] {item['name']}")
+            print(f"[{jsonData.get('id')}] {jsonData.get('name')}")
         else:
             print("No result")
     except ValueError:
