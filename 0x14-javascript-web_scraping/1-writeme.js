@@ -1,6 +1,7 @@
 #!/usr/bin/node
 const fs = require('node:fs');
-
-fs.writeFile(process.argv[2], process.argv[3], (err) => {
+const fileName = process.argv[2]
+const content = process.argv[3]
+fs.writeFileSync(fileName, content, { encoding: 'utf8', flag: 'w' }, (err) => {
   if (err) throw err;
 });
